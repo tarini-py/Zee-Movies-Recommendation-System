@@ -42,7 +42,6 @@ Every user has rated at least 20 movies. *(The schema mirrors the well-known **M
 - **What's popular:** *American Beauty (1999)* has the most ratings of any title in the catalog (3,428), based on a direct count of the raw ratings table.
   <img src="assets/top5_movies_corrected.png" width="600" alt="Top 5 most-rated movies on the platform, by direct rating count">
   > **Note:** the notebook's own "Top 10 Most-Rated Movies" chart (built by merging ratings against the genre-exploded `movies` table) shows the Star Wars trilogy in the top spots instead. That's a duplicate-counting artifact — `movies.explode('Genres')` runs *before* that merge, so a rating for a movie tagged with 5 genres gets counted 5 times. The chart above uses `ratings.groupby('MovieID').count()` directly on the un-exploded data, which matches the notebook's own Questionnaire answer. Worth a one-line fix (`.drop_duplicates()` on MovieID before merging, or aggregating before the explode) if you want the in-notebook chart to match.
-- **Taste by demographic:** average rating by genre was compared across gender and occupation to see where preferences diverge.
 
 ## Modeling Approach
 
