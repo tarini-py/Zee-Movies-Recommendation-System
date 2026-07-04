@@ -34,6 +34,7 @@ Every user has rated at least 20 movies. *(The schema mirrors the well-known **M
  
 - **Who rates:** mostly male users; the 25–34 age band is the most active rater group; `college/grad student` rates the most overall, and `executive/managerial` leads among users with full-time jobs.
 - **Genre mix:** Drama (25.0%) and Comedy (18.7%) dominate the catalog; the remaining seventeen genres each make up less than 8%, with Film-Noir the rarest at 0.7%.
+
   <img src="assets/genre_distribution.png" width="600" alt="Percentage distribution of movie genres">
 - **Catalog age:** new releases climb steadily through the dataset's window and peak in the **1990s** before tapering off.
   <img src="assets/movies_per_year.png" width="600" alt="Number of movies released per year">
